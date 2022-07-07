@@ -1,0 +1,11 @@
+img {
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
