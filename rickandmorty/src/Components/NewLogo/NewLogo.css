@@ -1,0 +1,19 @@
+:root {
+  --dark--green: #172913ed;
+  --hover: #e3e3e3ed;
+  --green-background: #b4e0bfed;
+}
+.newLogo-container {
+  text-align: center;
+}
+.newLogo-container button {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: var(--dark--green);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.newLogo-container button:hover {
+  background-color:#485e06ed;
+}

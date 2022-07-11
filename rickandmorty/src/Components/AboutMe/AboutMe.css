@@ -1,3 +1,7 @@
+:root {
+  --green-text: #7f8d05ed;
+}
+
 img {
   max-width: 300px;
   aspect-ratio: 1;
@@ -8,4 +12,9 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: var(--green-text);
+  font-size: 1.5rem;
+}
+.container span {
+  padding: 0.5rem;
 }

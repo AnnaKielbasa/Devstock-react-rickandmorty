@@ -1,0 +1,52 @@
+:root {
+  --dark--green: #172913ed;
+  --green-text: #7f8d05ed;
+  --green-background: #0a1f0fed;
+  --hover: #415741ed;
+  --hover-light: #bbd7bbed;
+  --grey-background: #cedfceed;
+  --white-text: #fff;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 2px solid var(--dark--green);
+  border-radius: 0.75rem;
+  margin: 0 auto;
+  max-width: 40vw;
+  background-color: var(--green-background);
+}
+.form-header {
+  color: var(--green-text);
+}
+form input,
+form button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+form button {
+  margin-bottom: 1rem;
+}
+form input:hover,
+form button:hover {
+  background-color: var(--hover-light);
+}
+
+.added-info-container {
+  color: var(--white-text);
+  border: 1px solid var(--grey-background);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.added-info-container h6 {
+  margin: 0.25rem auto;
+  font-size: 1.5rem;
+}
+.new-form-data-container {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem auto;
+}

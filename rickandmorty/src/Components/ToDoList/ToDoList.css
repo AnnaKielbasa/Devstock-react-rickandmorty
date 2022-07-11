@@ -1,0 +1,65 @@
+:root {
+  --dark--green: #172913ed;
+  --green-text: #7f8d05ed;
+  --green-background: #0a1f0fed;
+  --hover: #415741ed;
+  --hover-light: #bbd7bbed;
+  --grey-background: #cedfceed;
+}
+
+.todo-header {
+  color: var(--dark--green);
+  text-align: center;
+  background-color: var(--grey-background);
+  max-width: 15vw;
+  margin: 1rem auto;
+  border-radius: 10rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30vw;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid var(--dark--green);
+  border-radius: 10px;
+  background-color: var(--green-background);
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container input,
+.container button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.list-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.list-item-container button {
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+.list-item-container li {
+  font-size: 2rem;
+}
+.container input:hover,
+.container button:hover,
+.list-item-container button:hover {
+  background-color: var(--hover-light);
+}

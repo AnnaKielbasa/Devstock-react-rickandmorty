@@ -9,19 +9,29 @@ import Error from "./Components/Error";
 import Nav from "./Components/Nav/Nav";
 
 function App() {
+  const personDetails = { name: "Anka", lastName: "Kiełbasa" };
   const [logo, setLogo] = useState("Logo");
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Nav logo={logo} />}>
-          <Route path="aboutme" element={<AboutMe />} />
+          <Route
+            path="aboutme"
+            element={
+              <AboutMe
+                {...personDetails}
+                personDetails={personDetails}
+                logo={logo}
+                setLogo={setLogo}
+              />
+            }
+          />
           <Route path="characterslist" element={<CharactersList />} />
-          <Route path="todolist" element={<ToDoList />} />
+          <Route path="todolist" element={<ToDoList logo={logo} setLogo={setLogo} />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-      <footer></footer>
     </Router>
   );
 }
