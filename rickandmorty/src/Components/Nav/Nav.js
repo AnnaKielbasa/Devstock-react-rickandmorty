@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import "./Nav.css";
 
-function Nav({ logo }) {
+const Nav = ({ logo }) => {
   return (
     <div>
       <nav className="Nav">
@@ -19,6 +19,6 @@ function Nav({ logo }) {
       </section>
     </div>
   );
-}
+};
 
 export default Nav;

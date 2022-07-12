@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./CharactersList.css";
 
-function CharactersList() {
+const CharactersList=()=> {
   const [characterCard, setCharacterCard] = useState();
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character/?page=1")

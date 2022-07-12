@@ -1,5 +1,7 @@
 import "./NewLogo.css";
-function NewLogo({ logo, setLogo }) {
+const NewLogo = (props) => {
+  const { logo, setLogo } = props;
+  const changeLogoStatus = () => {};
   return (
     <div className="newLogo-container">
       <button
@@ -11,6 +13,6 @@ function NewLogo({ logo, setLogo }) {
       </button>
     </div>
   );
-}
+};
 
 export default NewLogo;

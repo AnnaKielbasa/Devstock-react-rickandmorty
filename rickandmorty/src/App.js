@@ -8,7 +8,7 @@ import Contact from "./Components/Contact/Contact";
 import Error from "./Components/Error";
 import Nav from "./Components/Nav/Nav";
 
-function App() {
+const App=() =>{
   const personDetails = { name: "Anka", lastName: "Kiełbasa" };
   const [logo, setLogo] = useState("Logo");
   return (

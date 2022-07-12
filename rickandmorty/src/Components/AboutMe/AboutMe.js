@@ -2,13 +2,12 @@ import photo from "./alain-gehri-BMxyU_Hkvs4-unsplash.jpg";
 import "./AboutMe.css";
 import { useState } from "react";
 
-function AboutMe({ name, lastName, logo, setLogo }) {
+const AboutMe = ({ name, lastName, logo, setLogo }) => {
   const [logoText, setLogoText] = useState("");
   const addLogoText = () => {
-    const newLogo = [...logo, " ", logoText];
+    const newLogo = [logo, " ", logoText];
     setLogo(newLogo);
     setLogoText("");
-    
   };
   return (
     <div className="container">
@@ -17,7 +16,7 @@ function AboutMe({ name, lastName, logo, setLogo }) {
         Cześć, Jestem {name} {lastName}
       </span>
       <span>Uczę się programować</span>
-      <div>
+      <div className="new-logo-text-container">
         <input
           type="text"
           placeholder="Type logo text..."
@@ -28,6 +27,6 @@ function AboutMe({ name, lastName, logo, setLogo }) {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import NewLogo from "../NewLogo/NewLogo";
 import "./ToDoList.css";
 
-function ToDoList({ logo,setLogo }) {
+const ToDoList = ({ logo, setLogo }) => {
   const [element, setElement] = useState("");
   const [inputValue, setInputValue] = useState([]);
 
@@ -44,6 +44,6 @@ function ToDoList({ logo,setLogo }) {
       <NewLogo logo={logo} setLogo={setLogo} />
     </div>
   );
-}
+};
 
 export default ToDoList;

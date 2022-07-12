@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Error() {
+const Error=() =>{
   return (
     <div>
       <div>Error!Page not found</div>
