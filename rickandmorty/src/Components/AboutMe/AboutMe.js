@@ -1,14 +1,15 @@
 import photo from "./alain-gehri-BMxyU_Hkvs4-unsplash.jpg";
 import "./AboutMe.css";
-import { useState } from "react";
 
-const AboutMe = ({ name, lastName, logo, setLogo }) => {
-  const [logoText, setLogoText] = useState("");
-  const addLogoText = () => {
-    const newLogo = [logo, " ", logoText];
-    setLogo(newLogo);
+const AboutMe = ({ name, lastName, logoText, setLogoText, logo, setLogo }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    logo.slice(0, 4) === "Logo"
+      ? setLogo(`Logo ${logoText}`)
+      : setLogo(`New Logo ${logoText}`);
     setLogoText("");
   };
+
   return (
     <div className="container">
       <img src={photo} alt="boats" />
@@ -16,15 +17,17 @@ const AboutMe = ({ name, lastName, logo, setLogo }) => {
         Cześć, Jestem {name} {lastName}
       </span>
       <span>Uczę się programować</span>
-      <div className="new-logo-text-container">
-        <input
-          type="text"
-          placeholder="Type logo text..."
-          onChange={(event) => setLogoText(event.target.value)}
-          value={logoText}
-        />
-        <button onClick={addLogoText}>Add text to Logo</button>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="new-logo-text-container">
+          <input
+            type="text"
+            placeholder="Type logo text..."
+            onChange={(event) => setLogoText(event.target.value)}
+            value={logoText}
+          />
+          <button type="submit">Add text to Logo</button>
+        </div>
+      </form>
     </div>
   );
 };

@@ -8,9 +8,11 @@ import Contact from "./Components/Contact/Contact";
 import Error from "./Components/Error";
 import Nav from "./Components/Nav/Nav";
 
-const App=() =>{
+const App = () => {
   const personDetails = { name: "Anka", lastName: "Kiełbasa" };
   const [logo, setLogo] = useState("Logo");
+  const [logoText, setLogoText] = useState("");
+
   return (
     <Router>
       <Routes>
@@ -23,17 +25,22 @@ const App=() =>{
                 personDetails={personDetails}
                 logo={logo}
                 setLogo={setLogo}
+                logoText={logoText}
+                setLogoText={setLogoText}
               />
             }
           />
           <Route path="characterslist" element={<CharactersList />} />
-          <Route path="todolist" element={<ToDoList logo={logo} setLogo={setLogo} />} />
+          <Route
+            path="todolist"
+            element={<ToDoList logo={logo} setLogo={setLogo} />}
+          />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

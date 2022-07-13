@@ -1,12 +1,10 @@
 import "./NewLogo.css";
-const NewLogo = (props) => {
-  const { logo, setLogo } = props;
-  const changeLogoStatus = () => {};
+const NewLogo = ({ logo, setLogo }) => {
   return (
     <div className="newLogo-container">
       <button
         onClick={() =>
-          logo === "Logo" ? setLogo("New Logo") : setLogo("Logo")
+          logo.slice(0, 4) === "Logo" ? setLogo("New Logo") : setLogo("Logo")
         }
       >
         Change Logo Status
