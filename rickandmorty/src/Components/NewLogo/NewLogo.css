@@ -1,7 +1,7 @@
 :root {
   --dark--green: #172913ed;
-  --hover: #e3e3e3ed;
-  --green-background: #b4e0bfed;
+  --green-hover: #485e06ed;
+  --white: #fff;
 }
 .newLogo-container {
   text-align: center;
@@ -9,11 +9,11 @@
 .newLogo-container button {
   font-size: 1.5rem;
   margin-top: 1rem;
-  color: #fff;
+  color: var(--white);
   background-color: var(--dark--green);
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .newLogo-container button:hover {
-  background-color:#485e06ed;
+  background-color: var(--green-hover);
 }

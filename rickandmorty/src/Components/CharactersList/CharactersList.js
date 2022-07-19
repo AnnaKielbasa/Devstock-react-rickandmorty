@@ -4,13 +4,16 @@ import SingleCard from "../SingleCard/SingleCard";
 
 const CharactersList = () => {
   const [characterCard, setCharacterCard] = useState();
-
+  const BASE_URL = "https://rickandmortyapi.com/api/character/?page=1";
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character/?page=1")
+    fetch(BASE_URL)
       .then((res) => {
         return res.json();
       })
-      .then((data) => setCharacterCard(data));
+      .then((data) => setCharacterCard(data))
+      .catch((error) => {
+        throw error;
+      });
   }, []);
 
   return (

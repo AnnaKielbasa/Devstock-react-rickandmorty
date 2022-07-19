@@ -21,7 +21,6 @@ const App = () => {
             path="aboutme"
             element={
               <AboutMe
-                {...personDetails}
                 personDetails={personDetails}
                 logo={logo}
                 setLogo={setLogo}

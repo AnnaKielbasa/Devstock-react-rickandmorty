@@ -9,11 +9,11 @@
   align-items: center;
   gap: 0.5rem;
   background-color: var(--grey-background);
-  border-radius: 10px;
+  border-radius: 1rem;
   padding: 1.5rem;
 }
 .character-card img {
-  border: 2px solid var(--dark--green);
+  border: 0.2rem solid var(--dark--green);
 }
 .character-card span {
   font-weight: 500;

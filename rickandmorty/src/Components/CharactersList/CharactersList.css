@@ -1,9 +1,6 @@
 :root {
-  --dark--green: #172913ed;
-  --green-text: #7f8d05ed;
   --green-background: #0a1f0fed;
   --grey-background: #cedfceed;
-  --hover: #415741ed;
 }
 .characters-header {
   text-align: center;
@@ -20,4 +17,3 @@
   align-items: center;
   gap: 2rem;
 }
-

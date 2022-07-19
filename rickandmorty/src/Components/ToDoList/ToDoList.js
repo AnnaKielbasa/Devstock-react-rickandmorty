@@ -6,7 +6,7 @@ const ToDoList = ({ logo, setLogo }) => {
   const [element, setElement] = useState("");
   const [inputValue, setInputValue] = useState([]);
 
-  const addElementList = (e) => {
+  const addElementList = () => {
     setInputValue([...inputValue, element]);
     setElement("");
   };
@@ -22,7 +22,7 @@ const ToDoList = ({ logo, setLogo }) => {
           <input
             type="text"
             placeholder="Type item..."
-            onChange={(event) => setElement(event.target.value)}
+            onChange={(e) => setElement(e.target.value)}
             value={element}
           />
           <button onClick={addElementList} type="submit">
