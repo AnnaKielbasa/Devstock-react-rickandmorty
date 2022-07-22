@@ -4,7 +4,7 @@ const Error = () => {
   return (
     <div>
       <div>Error!Page not found</div>
-      <Link to="/aboutme">Back home</Link>
+      <Link to="/">Back home</Link>
     </div>
   );
 };

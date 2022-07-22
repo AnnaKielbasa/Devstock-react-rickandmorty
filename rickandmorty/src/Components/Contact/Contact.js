@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Contact.css";
 
-const Contact =()=> {
+const Contact = () => {
   const [formData, setFormData] = useState([]);
   const formDefault = { email: "", message: "" };
   const handleSetFormChange = (e) => {
@@ -29,12 +29,14 @@ const Contact =()=> {
           type="email"
           name="email"
           placeholder="Type your email..."
+          value={formData.email}
           onChange={handleSetFormChange}
         />
         <input
           type="text"
           name="message"
           placeholder="Type your message..."
+          value={formData.message}
           onChange={handleSetFormChange}
         />
         <button type="submit" onClick={handleAddFormData}>
@@ -54,6 +56,6 @@ const Contact =()=> {
       </form>
     </div>
   );
-}
+};
 
 export default Contact;

@@ -5,10 +5,12 @@ const AboutMe = ({ personDetails, logoText, setLogoText, logo, setLogo }) => {
   const { name, lastName } = personDetails;
   const handleSubmit = (e) => {
     e.preventDefault();
-    logo.slice(0, 4) === "Logo"
-      ? setLogo(`Logo ${logoText}`)
-      : setLogo(`New Logo ${logoText}`);
-    setLogoText("");
+    if (logoText.length > 0) {
+      logo.slice(0, 4) === "Logo"
+        ? setLogo(`Logo ${logoText}`)
+        : setLogo(`New Logo ${logoText}`);
+      setLogoText("");
+    }
   };
   const handleChange = (e) => {
     if (e.target.value.length > 50)

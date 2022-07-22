@@ -2,6 +2,13 @@
   --green-background: #0a1f0fed;
   --grey-background: #cedfceed;
 }
+
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 .characters-header {
   text-align: center;
   color: var(--green-background);
